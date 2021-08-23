@@ -1,10 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./screens/Dashboard";
-import { ChakraProvider } from "@chakra-ui/react";
+// import { ChakraProvider } from "@chakra-ui/react";
+import Wrapper from "./components/Wrapper";
+// import FirebaseProvider from "./database";
 
 function App() {
   return (
-    <ChakraProvider>
+    <Wrapper>
+      {/* <FirebaseProvider> */}
       <Router>
         <div>
           <Switch>
@@ -14,13 +17,14 @@ function App() {
           <Route path="/topics">
             <Topics />
           </Route> */}
-            <Route path="/">
+            <Route exact path="/">
               <Dashboard />
             </Route>
           </Switch>
         </div>
       </Router>
-    </ChakraProvider>
+      {/* </FirebaseProvider> */}
+    </Wrapper>
   );
 }
 

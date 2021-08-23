@@ -53,7 +53,7 @@ switch (randomAnimNo) {
 }
 
 const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), timeout);
